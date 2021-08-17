@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transactions",
+  "info": {
+    "name": "transactions",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "transaction_id": {
+      "type": "string"
+    },
+    "provider": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "float"
+    }
+  }
+}

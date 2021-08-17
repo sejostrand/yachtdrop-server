@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "name": "orders",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "active",
+        "failed",
+        "cancelled",
+        "completed",
+        "refunded"
+      ],
+      "default": "pending",
+      "required": false
+    },
+    "transactionId": {
+      "type": "string"
+    },
+    "expectedDelivery": {
+      "type": "datetime",
+      "required": false
+    },
+    "usersPermissionsUser": {
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "location": {
+      "type": "richtext",
+      "required": false
+    },
+    "productList": {
+      "type": "json",
+      "required": false
+    },
+    "transactionAmount": {
+      "type": "decimal"
+    },
+    "recieverName": {
+      "type": "string"
+    },
+    "vesselName": {
+      "type": "string"
+    },
+    "contactNumber": {
+      "type": "biginteger"
+    }
+  }
+}

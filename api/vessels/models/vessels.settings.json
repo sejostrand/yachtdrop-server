@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "vessels",
+  "info": {
+    "name": "vessels",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "users_permissions_users": {
+      "via": "vessels",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "vessel_name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
